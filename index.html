@@ -5,28 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="search-field">
+            <i class="fa-solid fa-location-dot"></i>
             <input type="text" placeholder="Enter Location..">
-            <i></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="weather-info">
-            <img src="" alt="">
-            <h3>18</h3>
+            <img src="images/sun.png">
+            <h3>18°C</h3>
             <p>Overcast Clouds</p>
         </div>
         <div class="bottom-div">
             <div class="humidity">
-                <i></i>
-                <p></p>
+                <img src="images/wave.png" alt="">
+                <p><span>64 Km/h</span> <br>Wind Speed</p>
             </div>
             <div class="wind">
-                <i></i>
-                <p></p>
+                <img src="images/wind.png" alt="">
+                <p><span>71%</span> <br>Humidity</p>
             </div>
         </div>
     </div>
