@@ -1,5 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("images/background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(159, 29, 188, 0.221);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+}
+.search-field{
+    position: relative;
+    width: 100%;
+    height:55px;
+    display: flex;
+    align-items: center;
+}
+.search-field i{
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    color: white;
+}
+.search-field .location-field{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding:0 40px;
+    text-transform: uppercase;
+    outline: none;
+}
+.location-field::placeholder{
+    color: white;
+    text-transform: capitalize;
+}
+.search-field button{
+    position: absolute;
+    right: 0;
+    font-size: 26px;
+    padding: 5px 15px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.weather-info{
+    text-align: center;
+    margin : 50px 0;
+}
+.weather-info img{
+    width: 200px;
+}
+.weather-text .temperature{
+    position: relative;
+    margin-top: 5px;
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+}
+.weather-text span{
+    position: absolute;
+    top: 2px;
+    margin-left: 8px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.weather-text .weather-para{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.bottom-div{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+}
+.bottom-div img{
+    width: 50px;
+    filter: invert(1) brightness(2);
+    margin-right: 15px;
+}
+.humidity-section{
+    display: flex;
+    align-items: center;
+}
+.wind-section{
+    display: flex;
+    align-items: center;
+}
+.bottom-div p{
+    font-size: 13px;
+    font-weight: 500;
 }

@@ -15,22 +15,24 @@
     <div class="container">
         <div class="search-field">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text" placeholder="Enter Location..">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="location-field" placeholder="Enter Location">
+            <button class="fa-solid fa-magnifying-glass"></button>
         </div>
         <div class="weather-info">
-            <img src="images/sun.png">
-            <h3>18°C</h3>
-            <p>Overcast Clouds</p>
+            <img src="images/cloud.png" class="weather-img">
+            <div class="weather-text">
+                <h3 class="temperature">18 <span>°C</span></h3>
+                <p class="weather-para">Overcast Clouds</p>
+            </div>
         </div>
         <div class="bottom-div">
-            <div class="humidity">
+            <div class="humidity-section">
                 <img src="images/wave.png" alt="">
-                <p><span>64 Km/h</span> <br>Wind Speed</p>
+                <p><span class="humidity">71%</span> <br>Humidity</p>
             </div>
-            <div class="wind">
+            <div class="wind-section">
                 <img src="images/wind.png" alt="">
-                <p><span>71%</span> <br>Humidity</p>
+                <p><span class="wind">64 Km/h</span> <br>Wind Speed</p>
             </div>
         </div>
     </div>
