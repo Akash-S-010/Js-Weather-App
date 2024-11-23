@@ -27,6 +27,7 @@ search.addEventListener("click", () => {
             console.log(data);
 
             let cloud = data.weather[0].main;
+            console.log(cloud)
             let tempVal = data.main.temp;
             let description = data.weather[0].description;
             let humidityVal = data.main.humidity;
@@ -36,32 +37,36 @@ search.addEventListener("click", () => {
             tempContainer.style.display = "block";
             humidityContainer.style.display = "flex";
 
-            //------ Arrange the cloud image as per weather
-            if (cloud === "Clouds") {
-                video.parentElement.load()
-                video.src = "https://videos.pexels.com/video-files/854002/854002-hd_1920_1080_24fps.mp4";
+            weatherPara.innerHTML = description;
+            if (tempVal < 0) {
+                video.src = "https://videos.pexels.com/video-files/4419948/4419948-hd_1920_1080_24fps.mp4";
+                weatherImage.src = "images/snow.png";
+            }
+            else if (cloud === "Clouds") {
+                video.src = "https://videos.pexels.com/video-files/29496981/12697320_2560_1440_30fps.mp4";
                 weatherImage.src = "images/cloud.png";
             } else if (cloud === "Clear") {
-                video.parentElement.load()
                 video.src = "https://videos.pexels.com/video-files/29357417/12651084_640_360_30fps.mp4";
                 weatherImage.src = "images/clear.png";
             } else if (cloud === "Rain") {
-                video.parentElement.load()
                 video.src = "https://videos.pexels.com/video-files/1841455/1841455-hd_1280_720_25fps.mp4";
                 weatherImage.src = "images/rain.png";
             } else if (cloud === "Snow") {
-                video.parentElement.load()
                 video.src = "https://videos.pexels.com/video-files/4419948/4419948-hd_1920_1080_24fps.mp4";
                 weatherImage.src = "images/snow.png";
             } else if (cloud === "Mist") {
-                video.parentElement.load()
                 video.src = "https://videos.pexels.com/video-files/3615892/3615892-uhd_2560_1440_25fps.mp4";
                 weatherImage.src = "images/mist.png";
             } else if (cloud === "Haze") {
-                video.parentElement.load()
                 video.src = "https://videos.pexels.com/video-files/854752/854752-hd_1920_1080_30fps.mp4";
                 weatherImage.src = "images/haze.png";
+            } else {
+                // Default case for any other weather
+                video.src = "https://videos.pexels.com/video-files/854002/854002-hd_1920_1080_24fps.mp4";
+                weatherImage.src = "images/default.png";
             }
+
+            video.parentElement.load();
 
             // --fetched data shown in app-------
             temperature.innerHTML = `${tempVal}<span>°C</span>`;
@@ -77,6 +82,8 @@ search.addEventListener("click", () => {
 
             weatherImage.src = "images/404.png";
             weatherPara.innerHTML = "Oops! Invalid Location";
+            temperature.innerHTML = "";
+
         }
     };
 
