@@ -83,6 +83,9 @@ search.addEventListener("click", () => {
             weatherImage.src = "images/404.png";
             weatherPara.innerHTML = "Oops! Invalid Location";
             temperature.innerHTML = "";
+            video.src = "https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4";
+            video.parentElement.load();
+
 
         }
     };
