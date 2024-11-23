@@ -90,3 +90,9 @@ search.addEventListener("click", () => {
     getWeather();
     inputBox.focus()
 });
+
+inputBox.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        search.click(); 
+    }
+});
